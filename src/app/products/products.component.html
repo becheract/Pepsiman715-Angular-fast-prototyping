@@ -1,14 +1,12 @@
-<div class="container" style="background: #656d4a; width: 100vw; ">
-    <div class="row row-cols-1 row-cols-md-3">
-    <div *ngFor="let item of [].constructor(4); let i = index" class="col mb-4">
-    <div class="card" style="width: fit-content; margin: auto; padding: 25px; height: fit-content; gap:10px">
-        <img src="../../assets/images/coffee_pro_{{i + 1}}.jpg" class="card-img-top" alt="..." style="height:250px; width: auto;">
-        <div class="card-body" >
+    <div  style="display: flex; justify-content: center; flex-wrap: wrap ; background: #656d4a; width: 100w; height: auto">
+    <div *ngFor="let item of [].constructor(4); let i = index"  style="background: white; margin: 20px; padding: 16px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); flex: 0 1 calc(25% - 1em);">
+    <div style="text-align: center; align-self: center">
+        <img src="../../assets/images/coffee_pro_{{i + 1}}.jpg" class="card-img-top" alt="..." style="  max-width: 100%; height: auto;">
+        <div class="card-body" style="background: white;" >
           <h5 class="card-title">Card title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           <a href="#" class="btn btn-primary">Buy</a>
         </div>
       </div>
     </div>
-</div>
 </div>

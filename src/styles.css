@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+   }
+   *:before,
+   *:after {
+    box-sizing: border-box;
+   }
+   html,
+   body {
+    height: 100%;
+    position: relative;
+   }
+   
+    #container-grid{
+    width: 100vw; 
+    min-height: 100vh; 
+    background: #a4ac86; 
+    overflow: hidden;  
+
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "text imageCoffee"; 
+    }
+
+    #text { grid-area: text; }
+    
+    #imageCoffee { grid-area: imageCoffee; }
