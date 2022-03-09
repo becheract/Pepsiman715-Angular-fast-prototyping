@@ -14,4 +14,14 @@
         </div>
       </div>
     </div>
+
+    <div class="form-inline my-2 my-lig-0">
+      <div *ngIf="user.first_name.length > 0" class="mr-2">
+        Welcome <b>{{ user.first_name }}</b>
+      </div>
+
+      <a *ngIf="user.first_name.length <= 0" class ="btn btn-outline-secondary my-2 my-sm-0 p-10" routerLink="/signin">SignIn</a>
+
+      <a *ngIf="user.first_name.length > 0" class ="btn btn-outline-danger my-2 my-sm-0 p-10" (click)="signOut()" routerLink="/home">SignOut</a>
+    </div>
   </nav>

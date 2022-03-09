@@ -1,0 +1,25 @@
+<body class="text-center mt-4">
+    <h1>Sign In</h1>
+    
+    <div *ngIf=authentication_failed id="container">
+    <div class="alert alert-danger" role="alert">
+        unable to authenticate user, verify provided information!
+      </div>
+    </div>
+
+    <div class="container text-center">
+    <form class="form-signin" #userForm="ngForm" (ngSubmit)="getByEmail()">
+      <img class="mb-4" src="../../assets/images/coffee-svgrepo-com.svg" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control my-2" placeholder="Email address" required autofocus [(ngModel)]="user.email" name="email">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control my-2" placeholder="Password" required [(ngModel)]="user.password" name="password">
+
+    
+      <button class="btn btn-outline-secondary my-2" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+
+    </form>
+</div>
+  </body>
